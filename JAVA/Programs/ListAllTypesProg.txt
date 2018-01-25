@@ -1,0 +1,103 @@
+package com.collections;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
+
+public class ListAllTypes {
+
+	public void arrayList(){
+		
+		List<String> ls = new ArrayList<String>(); 
+		
+		ls.add("Ant");
+		ls.add("Bear");
+		ls.add("Cat");
+		ls.add("Dog");
+		ls.add("Elephant");
+		ls.add("Fox");
+		ls.add("Ant");
+		ls.add(null);
+		ls.add(null);
+		
+		System.out.println("ArrayList Size of ls is : " + ls.size());
+		
+		for(int i=0;i<ls.size();i++)
+		{
+			System.out.println(ls.get(i));
+		}
+	
+	}
+public void vectorList(){
+		
+		Vector<String> vlist = new Vector<String>(5);
+		Vector<Integer> vlist1 = new Vector <Integer>(4,5);
+
+		vlist.add("apple");
+		vlist.add("baby");
+		vlist.add("ant");
+		vlist.add("apple");
+		vlist.add(null);
+		vlist.add(null);
+		System.out.println("\n");
+		System.out.println("String Vector Size: " + vlist.size());
+		System.out.println("Vector list data");
+		for (String str : vlist){
+			System.out.println(str);
+		}
+		
+		
+		
+		System.out.println(" Vector String Collection Size  :" + vlist.capacity());
+		vlist1.add(10);
+		vlist1.add(20);
+		vlist1.add(10);
+		
+		System.out.println("Integer Vector Size: " + vlist1.size());
+
+		for (Integer str1 : vlist1){
+			System.out.println(str1);
+		}
+		System.out.println(" Integer Collection Size  :" + vlist1.capacity());
+		
+		
+}
+	
+public void linkedList(){
+	List<String> linklist = new LinkedList<String>(); // declaration
+	
+// adding data using add method
+	
+	linklist.add("Sree");
+	linklist.add("sri");
+	linklist.add("akshu");
+	linklist.add("annu");
+	linklist.add("annu");
+	linklist.add(null);
+	linklist.add(null);
+	
+	System.out.println("Linked list Size : " + linklist.size());
+	System.out.println("Linked List Data : ");
+	
+	// retrieving data using enhanced for
+	for(String link : linklist)
+	{
+		System.out.println(link);
+	}
+}
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		ListAllTypes list = new ListAllTypes();
+		list.arrayList();
+		list.vectorList();
+		list.linkedList();
+	}
+
+}

@@ -1,0 +1,93 @@
+package com.training.demo;
+
+public abstract class EmployeeInfo {
+
+	private int empid;
+	public static String empname;
+	private  String designation;
+	public float salary;
+	
+	public EmployeeInfo(int empid,String empname,String designation,int salary){
+		EmployeeInfo.empname=empname;
+		this.empid=empid;
+		this.designation=designation;
+		this.salary=salary;
+	}
+	
+	public abstract void annualSalary();
+	public abstract void tax();
+	//public abstract void getSalary();
+	
+	public void empDetails(){
+		System.out.println("Employee Name : "+ empname);
+		System.out.println("Employee Id : " + empid);
+		System.out.println("Employee Designation : " + designation);
+		System.out.println("Employee Salary is : " + salary);
+		
+}
+
+	
+}
+
+---------------------------------------------------------------
+
+package com.training.demo;
+
+public class SalaryInfo extends EmployeeInfo {
+	
+	public double yearsal;
+
+	public SalaryInfo(int empid, String empname, String designation,int salary) {
+		super(empid, empname, designation,salary);
+			}
+
+	@Override
+	public void tax() {
+		if (yearsal <100000){
+			System.out.println("No Tax\n");
+		}
+		else if (yearsal >10000 && yearsal<=300000){
+			System.out.println(EmployeeInfo.empname +" need to pay 10% of Tax\n");
+		}
+		else
+			System.out.println(EmployeeInfo.empname +" need to pay 20% of Tax\n");
+		
+	}
+	@Override
+	public void annualSalary() {
+		yearsal=salary*12;
+		System.out.println("Annual Salary is : " + yearsal);
+		
+		}
+
+	
+
+	
+}
+
+----------------------------------------------------------
+
+package com.training.demo;
+
+public class EmployeeDemo {
+
+	public static void main(String[] args) {
+		
+		EmployeeInfo e1 = new SalaryInfo(101,"SREE","Developer",3000);
+		e1.empDetails();
+		e1.annualSalary();
+		e1.tax();
+		
+		SalaryInfo e2 = new SalaryInfo(102,"Akhil","Architect",20000);
+		e2.empDetails();
+		e2.annualSalary();
+		e2.tax();
+		
+		EmployeeInfo e3 = new SalaryInfo(103,"Shwetha","Manager",30000);
+		e3.empDetails();
+		e3.annualSalary();
+		e3.tax();
+
+	}
+
+}

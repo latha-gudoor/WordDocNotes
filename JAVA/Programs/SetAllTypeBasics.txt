@@ -1,0 +1,123 @@
+package com.collections;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetBasicProgram {
+
+	void setHash(){
+		
+		Set<String> sethash = new HashSet<String>(); // declaration
+		
+		// adding the data
+		sethash.add("name");
+		sethash.add("abc");
+		sethash.add("xyz");
+		sethash.add("place");
+		sethash.add("name");
+		sethash.add(null);
+		sethash.add(null);
+
+		System.out.println("HashSet Size : " + sethash.size());
+		System.out.println(" HashSet Data : ");
+		// retrieving the data
+		for(String sh : sethash){
+			System.out.println(sh);
+		}
+		}
+
+public void linkedHash(){
+		
+		// linkedhashset declaration
+		Set<String> linkhash = new LinkedHashSet<String>();
+		Set<Integer> linkhash1 = new LinkedHashSet<Integer>();
+		
+		// adding String data
+		
+		linkhash.add("apple");
+		linkhash.add("hary");
+		linkhash.add("ana"); //repeated values are oveloaded with the new same value
+		linkhash.add("elie");
+		linkhash.add("henry");
+		linkhash.add("ana");
+		linkhash.add(null);
+		
+		System.out.println(" Linked HashSet Integer Data : ");
+		
+		
+		// adding interger data
+		
+		linkhash1.add(10);
+		linkhash1.add(20);
+		linkhash1.add(30);
+		linkhash1.add(40);
+		linkhash1.add(150);
+		linkhash1.add(10); // repeated values are overloaded with the new same value
+		
+		// iterator for Integer data
+				Iterator <Integer> itr = linkhash1.iterator();
+				while(itr.hasNext())
+					System.out.println(itr.next());
+				
+				System.out.println("Linked HashSet Integer size : " + linkhash1.size());
+				System.out.println(" Linked HashSet String Data : ");
+					
+				//retrieving String type data
+				
+				for (String lkhash : linkhash){
+					System.out.println(lkhash);
+				}
+				System.out.println("LinkedHashSet String size : " + linkhash.size());
+			}
+
+public void treeStringSet(){
+	
+	//declaration
+		Set<String> tset = new TreeSet<String>();
+		
+		
+	//adding string data
+	tset.add("abc");
+	tset.add("ball");
+	tset.add("doll");
+	tset.add("cat");
+	tset.add("fox");
+	tset.add("zero");
+	tset.add("abc");
+	//tset.add(null); // treeSet wont allow null 
+	
+	System.out.println("Tree Set String Data");
+	// enhanced loop for iteration
+	for(String treeset : tset)
+	System.out.println(treeset);
+	System.out.println("Tree String Size : " + tset.size());
+}
+
+public void floatTreeSet(){
+	Set<Float> fset = new TreeSet<Float>();
+	fset.add(101.56f);
+	fset.add(10.34f);
+	fset.add(10.87f);
+	fset.add(10.24f);
+	fset.add(10.56f);
+	//fset.add(null); // null is nor allowed in treeSet
+	
+	System.out.println("Tree set Float Data : ");
+	for(Float flset : fset)
+	System.out.println(flset);
+	System.out.println("Float Size : " + fset.size());
+}
+
+
+	public static void main(String[] args) {
+		SetBasicProgram set = new SetBasicProgram();
+		set.setHash();
+		set.linkedHash();
+		set.treeStringSet();
+		set.floatTreeSet();
+	}
+
+}

@@ -1,0 +1,57 @@
+                                                                #AUTOMATION FRAMEWORK#
+
+
+1) What is Automation framework?
+Is a systematic approach to automate software process in order to provide Resuasability and maintaibility.
+
+2)Language used is java ,for testing i have used junit and TestNg to run the test cases in form of suites.
+
+3)Maven is a powerful project management tool that is based on POM (project object model).
+ It is used for projects build, dependency and documentation. It simplifies the build process like ANT.
+ Maven lets you get your package dependencies easily we don't have to export all project related jars every time.
+ We put the project related dependency in pom.xml.
+
+4)What Framework is used?
+
+Modular Framework:Reusable code put in some functions and functions getting called where and whenever needed.
+
+DataDriven Framework:This Can Be acheievd in two ways 1)Data is tested with help of external files excel ,csv,xml etc
+                                                      2)By using annotations @Test(dataprovider="getData") 
+                                                        same name as the name of method 
+                                                        @DataProvider
+                                                         public object[][]getData(){
+                                                         return new object[][]{}
+                                                             }  
+
+KeyDriven Framework:Automation based on keywords specified in the excel sheet .
+example:Keyword "login" will be used in our automation framework, to the test the login function or action associated with it.
+
+
+HybridFramework:Is a combination of two above two framework.
+I have use DataDriven and Modular Framework.
+
+
+5)In order to increase reusability we use different patterns like PageObjectPatter,Singleton Pattern and PageFactory pattern.
+
+ What is PageObjectPattern:
+ There is a clean separation between test code and page specific code such as locators (or their use if you’re using a UI Map) and layout.
+ where is page of a website is connected to specific class.
+
+
+6)Stored Different Webdrivers in Resource file and for their cofiguration used Config-Properties.
+
+7)Minimal changes are required as well as should support different version and multiple envoirement.
+
+8)Use Log-4jfor generating logs.
+
+9) Package division: Base(DRiver connectivity)
+                     Helper
+                     Page
+                     Test 
+
+ 
+
+ 
+ 
+
+

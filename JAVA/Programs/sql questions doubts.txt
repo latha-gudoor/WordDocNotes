@@ -1,0 +1,50 @@
+Write a query to Select first_name, dept name, deptid,salary  from employees table and departments table  based on all the common column. 
+select hr.employees.First_name,department_id, hr.departments.department_name,hr.employees.salary from hr.employees join hr.departments
+using (department_id);
+
+2Q.
+Ans.
+select Hr.employees.First_name,hr.departments.department_name,department_id,hr.employees.salary from hr.employees join hr.departments using(department_id);
+Ans.with Alias name : (alias name can be used in the select statements but can not be use them inside the using cluase) 
+select e.first_name,d.department_name,department_id,e.salary from hr.employees e join hr.departments d using (department_id);
+
+
+-------
+Questions for 2maro class:
+
+1.using normal join we are checking for all the common columns from the two tables, and if we want to specify any particular condition based then we are using inner using specifying the common column using the keyword "using" with out alias names.
+
+what if we want to fetch the specified columns from both the tables with all the common columns, 
+example:Write a query to Select first_name, dept name, deptid,salary  from employees table and departments table  based on all the common column.
+how do we srite the query for this.
+
+in this there are manager_id and dept_id both are the common columns in two tables, with normal join by statement:select * from hr.employees join hr.departments; i will get all the columns of both table with common columns,
+with this statement : 
+select hr.employees.First_name,department_id, hr.departments.department_name,hr.employees.salary from hr.employees join hr.departments
+using (department_id);
+
+i will get the result but i dont get the manager id,when i specify statement:
+
+select hr.employees.First_name,department_id, hr.departments.department_name,hr.employees.salary from hr.employees join hr.departments
+using (department_id,manager_id);
+i will get results common both columns...but i dont get the manager_id column.
+
+i observed the only diffrence between "Using"and "on" is the diffrent column names for the common fields can be used with alias names. 
+-----------------------------------------------
+
+--select * from hr.employees;
+--select * from hr.departments;
+--empid,ename,department_id,departname for all emoloyees in a company
+--select First_name,Employee_id,Department_id,Department_name
+--select * from hr.employees join hr.departments using (department_id,manager_id);
+
+--1.Write a query to Select first_name, dept name, deptid,salary  from employees table and departments table  based on all the common column. 
+--select hr.employees.First_name,department_id,hr.departments.department_name,hr.employees.salary from hr.employees join hr.departments
+--using (department_id,manager_id);
+--select hr.employees.First_name,department_id,hr.departments.department_name,hr.employees.salary from hr.employees join hr.departments
+--using (department_id,manager_id);
+--2.Write a query to Select first_name, dept name, deptid,salary  from employees table and departments table  based on dept id
+--select Hr.employees.First_name,hr.departments.department_name,department_id,hr.employees.salary from hr.employees join hr.departments using(department_id);
+select e.first_name,d.department_name,department_id,e.salary from hr.employees e join hr.departments d using (department_id);
+
+

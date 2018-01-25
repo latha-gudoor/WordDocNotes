@@ -1,0 +1,82 @@
+>>> x =42
+>>> if x>1:
+	print 'more than 1'
+	if x<100:
+		print 'less than 100'
+		print 'All done'
+		
+more than 1
+less than 100
+All done
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> x=42
+>>> if x>1:
+	print 'more'
+	if x<100:
+	print 'less'
+	
+  File "<pyshell#13>", line 5
+    print 'less'
+        ^
+IndentationError: expected an indented block
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+
+x=4
+>>> if x>2:
+	print ('big')
+else:
+	print ('small')
+	print ('All done')
+output :big
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ while True:
+	line = raw_input('>')
+	if line[0] == '#':
+		continue
+	if line == 'done':
+		break
+	print line
+	print 'Done'
+	
+>hello
+hello
+Done
+>#
+>dont print this
+dont print this
+Done
+>done
+>>> 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+>>> for i in [5,4,3,2,1]:
+	print i
+	print 'blast off'	
+5
+blast off
+4
+blast off
+3
+blast off
+2
+blast off
+1
+blast off
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+friends = ['jos','bos','tos']
+>>> for friend in friends:
+	print 'Happy New Year',friend
+	print 'done!'
+
+	
+Happy New Year jos
+done!
+Happy New Year bos
+done!
+Happy New Year tos
+done!
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

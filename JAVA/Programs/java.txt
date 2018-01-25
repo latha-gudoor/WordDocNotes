@@ -1,0 +1,4 @@
+bininding variables to methods isencapsulation.
+
+set : no retun type
+get : data type

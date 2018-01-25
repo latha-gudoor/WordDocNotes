@@ -1,0 +1,133 @@
+Java Questions : 
+override is only for hashcode and equalsmethods only
+do we have to override other methods also according to the diff scenarios
+
+when we use user defined objects set takes as two different objects even though the values are same . when we write overrdide methods then it takes as single set.
+after writing the overrding method if i give the diff data still it is takng as same..
+in that case whats the use of overrding ...
+
+is this applicable for only for hashset orfor ither sets also.
+
+
+
+----------------------------------
+Coverian Return types..Video3 at 1:10min video check Q
+in child class cant they write printf statements directly without using methods
+how do i add underline uuuuuu
+whats the difference between statin and non static dynamic
+diff between overloading and overriding(inheritance)
+over loaded methods can be synchronised meaning
+public int calculate(int a,int b,int c){
+		int d=a*b*c;
+		return d;
+		System.out.println("Product is : "+d); // why this isnt working.
+
+check the static method
+can constructor can be given with multile parameters...like demo(int a,string name)
+public StudentRecord result(String res){ what this mean
+Can we say like Abstract classes are used for mainly implementing the Overrding.(inheritance)
+-------------------------------------------------------------------------------------------
+Assignments L
+WAP to practice primitive typecasting
+object reference typecasting
+operators and primitive data types
+------------------------------------------------------
+NOTES :
+
+Binding variables and methods together is callled Encapsulation.
+Parent class reference for child class objects -- Implicit casting
+
+
+Abstract :
+Abstarct methods : are methods with no boby
+Concrete methods : are the methods with body
+If you have any class which consists of methods without no body then we need to declare keyword "abstract" for the class ....which is callled as abstarct class.
+Methods without body are also called abstract methods need to be declared with keyword "abstarct".
+abstract class can consists of concrete methods and abstract methods.abstract methods are simply unimplemented methods.Implementationof the method body can be dealed by subclasses....
+Objects are cant be created directly with the parent class...
+Abstract classes can have the constructors, but it is called when we are creating the child class object.
+and it allows to define all the access modifiers (public,private,protected and defualt ) for variables and methods.
+
+When to use abstarct classess : 
+Whenever you want to provide common logic to be used by child logic and also we want to set some (abstract) methods to be implemented by child class just like setting rules for child class to implement.
+Abstract and Interfaces are both act like Parent Classes, they will definitely have child classes where the methods are implemented and rules are given by parent.
+
+INTERFACES :
+
+Interface is 100% Abstract class.
+Interface is a contract / setting the rules for Child class.
+In Interface we cannot add constructor and we cannot reate object,Interface. hence we use static for calling the objects without creation.
+None of the methods should contain body..that means all the methods have no body....that means all the methods are Abstract.
+In interface no need to declare "Abstratc" keyword for methods and classes...default all the methods are abstract.
+All the interface variables can be only public,static and final by default , we can declare  the variablesin child class but if want to declare the variables in interface then we do need folloow the rules, that its called as Contract.
+I
+
+Static : to use variale without using the object...classname.variablename
+final : not to re assigning ...making it as contacnt
+In interface when we declare constant values no need to write (public static final) all defualt it takes as constant A=10;
+Always constants it be declared in CAPS.
+To provide implementation for the methods we create the child class instead of "Extends" we use "Implements" keyword
+Private and protected access modifiers are not allowed for variables and methods too.
+Interface contains only abstract methods.
+
+When To USe :
+Whenever we do not have any common lanuage but we just want to set rules for child classes we can use abstarct interface.
+Also when multiple inheritance is needed in projects we can use Interface, because in java wecan not achieve multiple inheretance through Classes.
+we need Interface whenthere is a suituation, that we may need to add more methods to implement and you dont want to distrub all existing child classes.
+
+Java supports Multi level inheritance using class....but it only supports multiple Inheritance can only be done using Interfaces only.
+class A extends B{
+}
+class B extends C{
+}
+Class C extends D{
+}--- This means C extends B and A
+D extends A,B and C
+
+To avoid Deadly Death Diamond Problem java does not supports Multiple Inheritance.where as using Interface we can achieve multilevel Inheritance.
+
+Multiple Inheritance :
+
+Interface A -- test()
+Interface B ---test()
+Class C extentds A,B--- implementation is done in class both A and B has the same abstarct methods. 
+
+----------------------------------------------------
+
+DATA TYPES :
+
+Dattype :What kind of data variables to store
+Java is statically types lang...we need to define what kind of data we are assigning.
+dynamicall types means its decides at the execution time what kind of data it is.
+
+there are 8 premitive data types in Java. Premitive means its just a keyword not the class or object in java.
+other than these everything is Object type in Java.(part of class).
+all premititive data types arein lowercase
+All integer				Decimal				
+byte - 8 bit -128 to 128 range		float 32 bit		char 'a' ascii charcters
+short -16 bit				double	64 bit	boolean(T/F)
+int - 32bit
+long 64bit
+
+String is not an datatype ..but is frequently used as data type,its a class in Java. it is set of charecters...or array of charectors.
+
+if the values are not assigned for the Global variables then it assigns default values by java...where as for Local variable values need to be assigned.
+If we are giving the data type again for the same varicable in the method then it take the local variable value.
+
+
+
+
+
+
+
+LOOPS / CONDITIONAL / 
+
+
+
+--------------------------
+
+http://javaconceptoftheday.com/static-binding-and-dynamic-binding-in-java/
+http://javarevisited.blogspot.com/2011/12/final-variable-method-class-java.html
+http://www.sitesbay.com/java/java-final-keyword
+
+

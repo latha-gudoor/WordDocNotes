@@ -1,0 +1,67 @@
+package sri.first.oops;
+
+public class StudentRecord {
+
+	public static String name;
+	public static int rollnum=101;
+	public String subjects;
+	private int studentscore;
+	private String res;
+	public final int MINSCORE=35; // one way final variable initialisation
+	//grade;
+	
+	public StudentRecord(String stname){
+		System.out.println("Student Roll Number :" + rollnum);
+		// initialising the final value at the time of object cration
+		name=stname;
+		System.out.println("Student Name :" + name);
+		rollnum++;
+	}
+		
+		/*public StudentRecord(int rno){
+			rollnum=rno; // initialising the final value at the time of object cration
+			name="Ani";
+			System.out.println("Student Roll Number :" + rollnum);
+		}
+	}*/
+	public void subjects(){
+		System.out.println("Subjects : Math,English,Scienceand Social");
+	}
+	public void result(){
+		if (studentscore >= MINSCORE){
+			res = "Passed";
+			System.out.println(name +" is " + res);
+		}else {
+			res="Failed";
+			System.out.println(name +" is " + res);
+		}
+	}
+	
+	public static void main(String args[]){
+		
+		StudentRecord st1 = new StudentRecord("Anitha");
+		st1.studentscore = 45;
+		//System.out.println("Student Name : ");
+		//System.out.println(StudentRecord.rollnum);
+		
+		st1.subjects();
+		st1.result();
+		System.out.println("\n");
+		
+		StudentRecord st2 = new StudentRecord("Arpitha");
+		st2.studentscore = 30;
+		//System.out.println(StudentRecord.rollnum);
+		st2.subjects();
+		st2.result();
+		System.out.println("\n");
+		
+		StudentRecord st3 = new StudentRecord("Anupama");
+		st3.studentscore = 70;
+		//System.out.println(StudentRecord.rollnum);
+		st3.subjects();
+		st3.result();
+		System.out.println("\n");
+		
+	}
+}
+

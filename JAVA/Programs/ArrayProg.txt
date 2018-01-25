@@ -1,0 +1,70 @@
+package com.training.demo;
+
+public class ArrayProg {
+
+	// declaration-1
+	public void array(){
+		int[] stid = new int[5]; 
+		
+		//assigning
+		stid[0]=100; 
+		stid[1]=101;
+		stid[2]=102;
+		stid[3]=103;
+		stid[4]=104;
+		for(int i=0;i<stid.length;i++){
+			System.out.println("student id " + stid[i]);
+	
+		}
+		
+		System.out.println("\n");
+	int[] empid = {101,102,103,104,105}; // declaration -2
+		for(int i=0;i<stid.length;i++){
+	System.out.println("employee Id " + empid[i]);
+	}
+	
+	System.out.println("\n");
+	int[] srno = new int[]{10,20,30,40,50}; // declaration -3
+		for(int i=0;i<stid.length;i++){
+	System.out.println("serial no. " + srno[i]);
+		}
+		
+		//Two-Dimensional Array Declaration-1
+		int[][] muldim = new int[3][3];
+		muldim[0][0]= 1000;
+		muldim[0][1]= 2000;
+		muldim[0][2]= 3000;
+		muldim[1][0]= 4000;
+		muldim[1][1]= 5000;
+		muldim[1][2]= 6000;
+		muldim[2][0]= 7000;
+		muldim[2][1]= 8000;
+		muldim[2][2]= 9000;
+		
+		
+		System.out.println("\n two dimentional values ");
+		for(int i=0;i<3;i++){
+			for(int j=0;j<3;j++){
+				
+				System.out.println(muldim[i][j]);
+			}
+			
+			}
+			
+		int[][] twodime = {{1,2,3},{4,5,6},{7,8,9}}; // two-D Declaration-2
+		System.out.println("\n two dimentional diff values ");
+		for(int i=0;i<3;i++){
+			for(int j=0;j<3;j++){
+				System.out.println(twodime[i][j]);
+			}
+		}
+		}
+
+	public static void main(String[] args) {
+		
+		ArrayProg arr = new ArrayProg();
+		arr.array();
+
+	}
+
+}

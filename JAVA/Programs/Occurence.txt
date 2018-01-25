@@ -1,0 +1,38 @@
+package com.string.prog;
+
+public class StringPosition {
+
+	 String str = new String("Happy New Year"); // creating string object
+	 
+	 // string concatenation operations on string
+	 String s = "Welcome ".concat(str);
+     String s1 = str.concat(" 2007");
+
+     	// string length
+     public void stringLength(){
+    	System.out.println(str);
+    	System.out.println("Length = " + str.length());
+ 		System.out.println(s);
+ 		System.out.println("Length = " + s.length());
+ 		System.out.println(s1);
+ 		System.out.println("Length = " + s1.length());
+     }
+ 		// character occurrence in string 
+ 		public void charOccurence()
+ 		{
+ 			String str1 = "Core Java Concepts";
+ 			System.out.println(str1);
+ 			System.out.println("position of character J " + str1.indexOf('J'));
+ 			System.out.println(" Charater position of C " + str1.indexOf('C'));
+ 			System.out.println(" Charater position of C " + str1.lastIndexOf('C'));
+ 			System.out.println(" Charater position of c " + str1.indexOf('c'));
+ 			
+ 			
+ 		}
+ 		
+    	 public static void main(String[] args) {
+		StringPosition obj = new StringPosition();
+		obj.stringLength();
+		obj.charOccurence();
+	}
+}

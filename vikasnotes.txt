@@ -1,0 +1,113 @@
+http://seleniumfoundationprogram.blogspot.com/2017/01/what-is-automation-testing.html
+
+
+
+
+ framework is a set of programming codes that would be very commonly used so that when you build your own software, instead of everyone building everything frame scratch, you use a common framework that has all the basic common functions already built. There are a lot of different frameworks programmers can use to build their software on, so it's better to use a standard framework, then you'd be sure that most people already have it. Otherwise, you'd have to tell people to first install that framework. 
+
+Framework- Semi finished application(set of classes bundled together- jars) which we use and get rid of all redundant logic or to avoid boiler plate code and make our development easy.
+
+2.
+1.Modular Based Testing Framework
+Library Architecture Framework
+Data driven Framework
+Keyword Driven Framework
+Hybrid Driven Testing Framework
+BDD framework
+
+3.Advantages of Automation 
+Reusability of code
+Maximum coverage
+Recovery scenario
+Low cost maintenance
+Minimal manual intervention
+Easy Reporting
+
+---
+70% faster than the manual testing 
+Ø Wider test coverage of application features 
+Ø Reliable in results 
+Ø Ensure Consistency 
+Ø Saves Time and Cost 
+Ø Improves accuracy 
+Ø Human Intervention is not required while execution 
+Ø Increases Efficiency 
+Ø Better speed in executing tests 
+Ø Re-usable test scripts 
+Ø Test Frequently and thoroughly 
+Ø More cycle of execution can be achieved through automation 
+Ø Early time to market 
+
+4.When to Automate and when not to automate?
+
+Automation depends on timeframe available, if we have a very tight dead line then we cannot go for automation.
+Automation should be avoided if there is any UI change expected in near future as we need to rewrite the automations scripts again.
+Also application scenarios wise – pages which need manual interactions cannot be automated like
+ 1. If there is some captcha code being generated instantly and u need to enter that code or payment page where OTP is bing sent to mobile.
+2.Image / Video Previews - Between transitioning between thumbnail and playback of videos I have observed not well automated
+3.BarCodeReader cannot be automated
+
+Automation in preferred in following cases
+
+Repetitive Tasks
+Smoke and Sanity Tests
+Test with multiple data set
+Regression test cases
+Usually the decision is based on the ROI (Return on Investment)
+
+2) When you will not automate testing?
+
+One should not automate in following cases
+
+When the Application Under Test changes frequently
+One time test cases
+
+1.when there are repetitives tasks are to be performed.
+2.when we need to do lot of regression testing
+3.when we dont have tight deadlines
+4. we can automate when we know there are no changes in the GUI.
+5.it saves time and resorces.
+6. testing with multiple data (datadriven testing)
+
+When Not to Automate:
+1.When we have tight deadlines then we cant go for automation.
+2.If the UI of the appication is not stable and changes are expected in near future , then its not a gud idea to automate.
+3. whenever if there is human intervention is required like typing the OTP for bank account oy any Captcha images etc , automation is not suggested.
+
+
+
+5.what did you used for your Automation ?
+
+I dint tried doing of any automation framework. after listening to medha class i just got an idea what all we  need for an Automation Framework.
+1. We need to choose a language which i prefer to use "Java" in my framework.
+2.For test case verifications and validations i need assertions to be added ontest cases , so i use TestNg framework, which can be also used for test reports.
+3.for logs,screenshots and debugging need log4j(dont know much about log4j--need to check on this)
+4.Java Design Patterns ,properties files
+5.Build and integrations tools (i prefer maven & jenkins)
+6. Data driven testing using excel,..etc 
+7. Automation frameworks - i prefer Selenium webdriver.
+
+1.	To do automation – we need to choose a language –Java,Javascript,C#
+2.	Don’t want to execute using main method – (Testing F/W – testng)
+3.	Test definitions- test cases – verify&Validate the testcases – assertions & logs -(Testing F/W – testng)
+4.	Test reports – to analyse -(Testing F/W – testng)
+5.	Also we need logs /screenshots to debug-(log4j)
+6.	We want a mechanism to run all the tests together –(Testing F/W – testing.xml)
+7.	Code reusability – Java DesignPatterns(dependencyInjection,singleton,PageObject,UIMapping,DataDriven…)
+8.	Avoid hardcoded data – properties file (java.uti.Properties)
+9.	Data driven using excel,csv,text… - apache poi
+10.	Build and continuously integrate the changes(Maven&Jenkins)
+11.	Automation F/w- web/mobile/RestAPis – SeleniumWebdriver,WebDriver+Appium,selendroid, http-client
+
+
+Framework requires a lot of effort to build but proves to be beneficial in a long run
+
+Why ?
+
+Once framework is created you can use to Automate any application . Just few changes in configuration , test data & object repository .
+Faster Test execution
+Minimal human intervention
+Can run periodically or can be triggered on specified action
+Better report generation
+Failure alerts
+Can be used by non technical user also if documented properly

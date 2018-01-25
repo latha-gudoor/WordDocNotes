@@ -1,0 +1,106 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
+import org.junit.Test;
+
+import com.fasterxml.jackson.core.JsonParser;
+
+import io.restassured.http.ContentType;
+import io.restassured.internal.support.FileReader;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.junit.Assert.*;
+
+import org.apache.commons.io.IOUtils;
+import org.hamcrest.Matchers.*;
+import org.json.JSONObject;
+
+
+public class Rest_Assured {
+	String baseURL = "https://itunes.apple.com";
+	String path = "/lookup";
+	
+	
+	@Test
+	public void testStatus(){
+		String url = baseURL + path;
+		int statuscode = given()
+				.contentType(ContentType.TEXT).param("id","909253")
+				.get(url)
+				.statusCode();
+		
+		System.out.println("StatusCode:" + statuscode);
+		assertTrue(statuscode == 200);
+}
+	@Test
+	public void testHeaderContent(){
+		String url = baseURL + path;
+		String headerline = with()
+				.contentType(ContentType.TEXT).param("id","909253")
+				.get(url).andReturn().contentType();	
+			assertTrue(headerline.contentEquals("text/javascript; charset=utf-8"));
+			System.out.println("status=" + headerline);
+		 }
+	@Test
+	public void testStatusOK(){
+		String url = baseURL + path;
+		String statusline = given()
+			.contentType(ContentType.TEXT).param("id","909253")
+			.get(url).thenReturn().statusLine();	
+		assertTrue(statusline.contains("OK"));
+		System.out.println("status=" + statusline);
+	}
+	@Test
+	public void testElementResponse() throws IOException{
+		String url = baseURL + path;
+		String response = given()
+			.contentType(ContentType.TEXT).param("id","909253")
+			.get(url)	
+		.then()
+		.extract()
+		.response().asString();
+		JsonParser parser = new JsonParser();
+	    Object obj = ((Object) parser).parse(new FileReader(response));
+	    JSONObject jsonObject = (JSONObject) obj;
+	    String id= (String) jsonObject.get("id");
+		
+		File file1 = new File("C:\\Users\\ompra\\Desktop\\session\\test1.txt");
+		String s1 = file1.toString();
+		boolean results = response.matches("results");
+		System.out.println(response);
+		try (FileWriter file = new FileWriter("C:\\Users\\ompra\\Desktop\\session\\test.txt")) {
+			   file.write(response);
+			  String s2=  file.toString();
+			  //s2.replaceAll("Artist", "Arti");
+			  s2.replaceAll(s1, s2);
+			  //s2.replaceAll("artistName", "Pradnya");
+			 // s2.replaceAll("Artist", "Arti");
+			  System.out.println(s2);
+		}
+		
+		//assertNotNull(results);
+		}
+	@Test
+	public void testElementCount(){
+		
+		String url = baseURL + path;
+		String json = given()
+			.contentType(ContentType.TEXT).param("id","909253")
+			.get(url)	
+			.asString();
+		
+		JsonPath jsonpath = new JsonPath(json).setRoot("results");
+		List<String> address_comp = jsonpath.get();
+		System.out.println(jsonpath.getString("artistName"));
+		System.out.println(address_comp);
+		System.out.println(address_comp.size());
+		assertTrue(address_comp.size() == 1);
+	}
+	
+}

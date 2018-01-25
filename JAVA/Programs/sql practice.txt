@@ -1,0 +1,298 @@
+select distinct ROW_NUMBER() over (ORDER BY salary) rn,salary from hr.employees where rownum <= 2 order by salary;
+
+
+
+Result Set 30
+RN	SALARY
+1	17000
+2	24000
+
+
+select distinct ROW_NUMBER() over (ORDER BY salary) rn,salary from hr.employees where rownum <= 2 order by salary desc;
+
+
+
+
+
+Result Set 31
+RN	SALARY
+2	24000
+1	17000
+
+select ROW_NUMBER() over (ORDER BY salary) rn,First_name,Salary from hr.employees;
+select ROW_NUMBER() over (ORDER BY salary) rn,First_name,Salary from hr.employees order by salary;
+
+
+Result Set 32
+RN	FIRST_NAME	SALARY 
+1	TJ	2100
+2	Steven	2200
+3	Hazel	2200
+4	James	2400
+5	Ki	2400
+6	Karen	2500
+7	James	2500
+8	Joshua	2500
+9	Peter	2500
+10	Martha	2500
+11	Randall	2500
+12	Guy	2600
+13	Randall	2600
+14	Donald	2600
+15	Douglas	2600
+16	Irene	2700
+17	John	2700
+18	Sigal	2800
+19	Mozhe	2800
+20	Girard	2800
+21	Vance	2800
+22	Shelli	2900
+23	Michael	2900
+24	Timothy	2900
+25	Anthony	3000
+26	Kevin	3000
+27	Alexander	3100
+28	Curtis	3100
+29	Jean	3100
+30	Alana	3100
+31	Julia	3200
+32	Stephen	3200
+33	Winston	3200
+34	Samuel	3200
+35	Laura	3300
+36	Jason	3300
+37	Julia	3400
+38	Trenna	3500
+39	Renske	3600
+40	Jennifer	3600
+41	Kelly	3800
+42	Britney	3900
+43	Sarah	4000
+44	Alexis	4100
+45	Diana	4200
+46	Nandita	4200
+47	Jennifer	4400
+48	David	4800
+49	Valli	4800
+50	Kevin	5800
+51	Bruce	6000
+52	Pat	6000
+53	Sundita	6100
+54	Amit	6200
+55	Charles	6200
+56	Sundar	6400
+57	Shanta	6500
+58	Susan	6500
+59	David	6800
+60	Luis	6900
+61	Oliver	7000
+62	Sarath	7000
+63	Kimberely	7000
+64	Mattea	7200
+65	Elizabeth	7300
+66	William	7400
+67	Nanette	7500
+68	Louise	7500
+69	Ismael	7700
+70	Jose Manuel	7800
+
+
+
+
+select ROW_NUMBER() over (ORDER BY salary) rn,First_name,Salary from hr.employees order by salary desc;
+
+RN	FIRST_NAME	SALARY
+107	Steven	24000
+105	Lex	17000
+106	Neena	17000
+104	John	14000
+103	Karen	13500
+102	Michael	13000
+100	Shelley	12008
+101	Nancy	12008
+99	Alberto	12000
+98	Lisa	11500
+96	Den	11000
+97	Ellen	11000
+95	Gerald	11000
+94	Eleni	10500
+93	Clara	10500
+90	Harrison	10000
+91	Janette	10000
+92	Peter	10000
+89	Hermann	10000
+88	Tayler	9600
+87	David	9500
+86	Danielle	9500
+85	Patrick	9500
+81	Alexander	9000
+84	Allan	9000
+83	Peter	9000
+82	Daniel	9000
+80	Alyssa	8800
+79	Jonathon	8600
+78	Jack	8400
+77	William	8300
+76	Adam	8200
+75	John	8200
+72	Matthew	8000
+73	Christopher	8000
+74	Lindsey	8000
+71	Payam	7900
+70	Jose Manuel	7800
+69	Ismael	7700
+68	Louise	7500
+67	Nanette	7500
+66	William	7400
+65	Elizabeth	7300
+64	Mattea	7200
+63	Kimberely	7000
+62	Sarath	7000
+61	Oliver	7000
+60	Luis	6900
+59	David	6800
+58	Susan	6500
+57	Shanta	6500
+56	Sundar	6400
+54	Amit	6200
+55	Charles	6200
+53	Sundita	6100
+52	Pat	6000
+51	Bruce	6000
+50	Kevin	5800
+49	Valli	4800
+48	David	4800
+47	Jennifer	4400
+45	Diana	4200
+46	Nandita	4200
+44	Alexis	4100
+43	Sarah	4000
+42	Britney	3900
+41	Kelly	3800
+40	Jennifer	3600
+39	Renske	3600
+38	Trenna	3500
+37	Julia	3400
+36	Jason	3300
+35	Laura	3300
+33	Winston	3200
+32	Stephen	3200
+31	Julia	3200
+34	Samuel	3200
+27	Alexander	3100
+30	Alana	3100
+29	Jean	3100
+28	Curtis	3100
+26	Kevin	3000
+25	Anthony	3000
+24	Timothy	2900
+22	Shelli	2900
+23	Michael	2900
+18	Sigal	2800
+19	Mozhe	2800
+21	Vance	2800
+20	Girard	2800
+16	Irene	2700
+17	John	2700
+12	Guy	2600
+14	Donald	2600
+15	Douglas	2600
+13	Randall	2600
+10	Martha	2500
+9	Peter	2500
+8	Joshua	2500
+7	James	2500
+6	Karen	2500
+11	Randall	2500
+4	James	2400
+5	Ki	2400
+2	Steven	2200
+3	Hazel	2200
+1	TJ	2100
+
+-------------------------------------
+
+//select distinct ROW_NUMBER() over(order by salary) rn,employee_id,First_name,salary from hr.employees order by salary desc ;
+
+//select salary from hr.employees where in () where rownum between(6,10));
+
+//select distinct salary from hr.employees where between (rownum <=7) and (rownum<=11) order by salary desc ;
+
+
+//select ROW_NUMBER() over (ORDER BY salary) rn,salary from hr.employees where rownum >=6 and rownum <= 11;
+
+
+//select * from (select salary from hr.employees order by salary desc) where rownum between 6 and 11;
+
+//select salary from hr.employees order by salary;
+
+
+/*select distinct ROW_NUMBER() over (ORDER BY salary) rn,salary from hr.employees where rownum <= 2 order by salary;
+select distinct ROW_NUMBER() over (ORDER BY salary) rn,salary from hr.employees where rownum <= 2 order by salary desc;
+
+
+select ROW_NUMBER() over (ORDER BY salary) rn,First_name,Salary from hr.employees;
+
+select ROW_NUMBER() over (ORDER BY salary) rn,First_name,Salary from hr.employees order by salary;
+
+select ROW_NUMBER() over (ORDER BY salary) rn,First_name,Salary from hr.employees order by salary desc
+
+
+does distinct work on multiple columns
+
+
+Hi medha...
+i have some questions on following Queries
+
+Finding the highest 6th to 10th salary:
+
+-----------------------------------------------
+
+//select salary from hr.employees where rownum<=10;
+//select salary from hr.employees where rownum = 10;
+
+/*SELECT * FROM
+   (SELECT * FROM hr.employees ORDER BY employee_id)
+   WHERE ROWNUM < 11;
+   
+   SELECT * FROM
+   (SELECT distinct salary FROM hr.employees ORDER BY salary desc)
+   WHERE ROWNUM < 11;
+   
+   select * from(
+select salary from hr.employees where salary not in(select * from (select salary from hr.employees order by salary desc) where rownum<=2) order by salary desc)
+where rownum<=1;*/
+
+//select salary from hr.employees order by salary desc;  
+//107
+
+select salary from (select salary from hr.employees order by salary desc) where rownum<=10;
+//10rows from top
+/*
+select salary from hr.employees where salary not in(select salary from (select salary from hr.employees order by salary desc) where rownum<=10;
+order by salary desc;
+//97 removing first 10 rows
+
+select salary from hr.employees where salary not in(select salary from hr.employees where salary in
+(select salary from (select salary from hr.employees order by salary desc) where rownum<=10)*/
+
+
+select salary from hr.employees where salary not in(select salary from (select salary from hr.employees order by salary desc) where rownum<=10)
+order by salary where rownum<=5;
+
+/*select salary from hr.employees where salary not in
+((select salary from (select salary from hr.employees order by salary desc) where rownum<=10) 
+where rownum<=5;
+order by salary desc)where rownum<=5;*/
+
+/*select salary from hr.employees where salary not in
+((select salary from hr.employees where salary in(select salary from (select salary from hr.employees order by salary desc) where rownum<=10)order by salary desc))
+order by salary desc)
+ where rownum<=5;
+
+
+select salary from (select salary from hr.employees where salary in(select salary from (select salary from hr.employees order by salary desc) where rownum<=01)
+order by salary desc) rownum<=5;*/
+
+
+

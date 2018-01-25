@@ -1,0 +1,220 @@
+package sri.first.oops;
+
+public class TrainingClass {
+
+	private String instructors;
+	private Integer students;
+	private String courses;
+	
+	
+	/*public TrainingClass(){
+		System.out.println("The Lab can be accessed by all Students");
+		assignments();
+		
+	//private String assignments;
+	//private String lab;
+			}*/
+
+	public void assignments() {
+		System.out.println("Read the java OOPS Concepts");
+		System.out.println("Practice SQL Queries");
+		System.out.println("Read the notes on HTML5");
+		System.out.println("Write programs on java Scripts");
+	}
+
+
+	public void recordings() {
+		System.out.println("Students can use the Recordings from the Portal Anytime");
+		
+	}
+
+	
+	public Integer getStudents() {
+		return students;
+	}
+
+	public void setStudents(Integer students) {
+		this.students = students;
+	}
+	public void setcourses(String courses) {
+		this.courses = courses;
+		
+		
+	}
+
+	public String getcourses() {
+		return courses;
+		//System.out.println("courses : " + courses);
+	}
+		public void setInstructor(String instructors){
+		this.instructors=instructors;
+	}
+
+	public String getInstructor(){
+		return instructors; 
+	}
+	
+	
+
+	
+	
+	
+}
+---------------------------------------
+package sri.first.oops;
+
+public class TrainingTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		TrainingClass b1 = new TrainingClass();
+		b1.setInstructor("kavitha");
+		b1.setStudents(15);	
+		b1.setcourses("Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI");
+		System.out.println("November Batch Details :");
+		System.out.println("--------------------");
+		System.out.println("Instructor Name : " + b1.getInstructor());
+		System.out.println("Total Students in the Batch : "+ b1.getStudents());
+		System.out.println("Materials : " + b1.getcourses());
+		b1.recordings();
+		System.out.println("The Lab can be accessed by all Students");
+		System.out.println("Assignments : ");
+		b1.assignments();
+		System.out.println("\n");
+		
+	
+		UiClass b2 = new UiClass();
+		b2.setInstructor("kumar");
+		b2.setStudents(10);	
+		b2.setcourses("Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI");
+		System.out.println("December Batch Details :");
+		System.out.println("--------------------");
+		System.out.println("Instructor Name : " + b2.getInstructor());
+		System.out.println("Total Students in the Batch : "+ b2.getStudents());
+		System.out.println("Materials : " + b2.getcourses());
+		b2.recordings();
+		System.out.println("The Lab can be accessed by all Students");
+		System.out.println("Assignments : ");
+		b2.assignments();
+		System.out.println("\n");
+		
+		QaClass b3 = new QaClass();
+		b3.setInstructor("Medha");
+		b3.setStudents(25);	
+		b3.setcourses("Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI");
+		System.out.println("January Batch Details :");	
+		System.out.println("--------------------");
+		System.out.println("Instructor Name : " + b3.getInstructor());
+		System.out.println("Total Students in the Batch : "+ b3.getStudents());
+		System.out.println("Materials : " + b3.getcourses());
+		b3.recordings();
+		System.out.println("The Lab can be accessed by all Students");
+		System.out.println("Assignments : ");
+		b3.assignments();
+		System.out.println("\n");
+		
+		TrainingClass b4 = new TrainingClass();
+		b4.setInstructor("komal");
+		b4.setStudents(35);	
+		b4.setcourses("Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI");
+		System.out.println("February Batch Details :");
+		System.out.println("--------------------");
+		System.out.println("Instructor Name : " + b4.getInstructor());
+		System.out.println("Total Students in the Batch : "+ b4.getStudents());
+		System.out.println("Materials : " + b4.getcourses());
+		b4.recordings();
+		System.out.println("The Lab can be accessed by all Students");
+		System.out.println("Assignments : ");
+		b4.assignments();
+		
+	}
+
+}
+
+---------------------------------------------------
+package sri.first.oops;
+
+public class QaClass extends TrainingClass {
+	
+	@Override
+	public void assignments() {
+		System.out.println("Read the Testing Fundamentals");
+		System.out.println("Practice SQL Queries");
+		System.out.println("Practice the UNIX ");
+		System.out.println("Write programs on Inheritance and Encapsulation");
+	}
+
+
+	
+}
+--------------------------------------------
+package sri.first.oops;
+
+public class UiClass extends TrainingClass {
+
+	@Override
+	public void assignments() {
+		System.out.println("Go throgh the W3 Schhols for HTML");
+		System.out.println("Practice SQL Queries");
+		System.out.println("Do the Programming on Java Scripts");
+		System.out.println("Read NodeJs Materials");
+	}
+
+}
+-----------------------------------------------------------
+CONSOLE :
+November Batch Details :
+--------------------
+Instructor Name : kavitha
+Total Students in the Batch : 15
+Materials : Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI
+Students can use the Recordings from the Portal Anytime
+The Lab can be accessed by all Students
+Assignments : 
+Read the java OOPS Concepts
+Practice SQL Queries
+Read the notes on HTML5
+Write programs on java Scripts
+
+
+December Batch Details :
+--------------------
+Instructor Name : kumar
+Total Students in the Batch : 10
+Materials : Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI
+Students can use the Recordings from the Portal Anytime
+The Lab can be accessed by all Students
+Assignments : 
+Go throgh the W3 Schhols for HTML
+Practice SQL Queries
+Do the Programming on Java Scripts
+Read NodeJs Materials
+
+
+January Batch Details :
+--------------------
+Instructor Name : Medha
+Total Students in the Batch : 25
+Materials : Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI
+Students can use the Recordings from the Portal Anytime
+The Lab can be accessed by all Students
+Assignments : 
+Read the Testing Fundamentals
+Practice SQL Queries
+Practice the UNIX 
+Write programs on Inheritance and Encapsulation
+
+
+February Batch Details :
+--------------------
+Instructor Name : komal
+Total Students in the Batch : 35
+Materials : Testing,UI,SQL,Unix,java,oracle,java scripts,SoupUI
+Students can use the Recordings from the Portal Anytime
+The Lab can be accessed by all Students
+Assignments : 
+Read the java OOPS Concepts
+Practice SQL Queries
+Read the notes on HTML5
+Write programs on java Scripts

@@ -1,0 +1,49 @@
+Testng n Junit
+
+1) What is diff bet Junit n TestNG?
+
+ Annotions
+ Xml Configuration
+ DepondsOn, group
+ Reports - html, testng
+ 
+2) Explain the process of Data Driven Testing in TestNG?
+Public class TestLogin{
+@DataProvider(name ="login data")
+Public object[][] testData(){
+Return new object [][]{{true,1}};
+}
+@Test(data provider ="login data")
+Public void testLogin(Boolean expected, int Id)
+}
+
+3) What is soft n hard dependency?
+@Test
+public void test1(){
+S.O.P("Test1");
+}
+
+@Test(dependsOnMethods = test1)
+public void test2(){
+S.O.P("Test1");
+}
+
+4) How do we priortise the methods?
+	@Test(priority = 0)
+	
+5) How do you do Parallel testing using TestNg?
+	Suite parallel = "tests / methods"
+
+6) How do you handle exceptions in Testng?
+	@Test(exceptedExceptions = {"IOException"})
+
+7) Can we have multiple testng.xml files?
+	Yes
+
+8) <suite><test><classes><class><methods>
+
+9) (In the same method)Using Soft Assert class we can execute all the remaining assert stmts if one of the assert fails.
+	
+	
+	
+	

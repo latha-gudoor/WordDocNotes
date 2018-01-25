@@ -1,0 +1,43 @@
+Assignment-1:
+1.Create a class and define properties and methods.
+2.Create Objects for class and access properties and methods.
+
+Assignment-2:
+3.Write a class that describes few fields and methods w.r.to Training.
+4.Write subclasses for QA and UI training with specific implementation for recordings and
+ course content.
+
+Assignment-3:
+5.Write a program to explain method overloading 
+6.Write a program to explain method overriding
+7.Write a program that has a method which return the count of objects created for that class.
+8.Write a method which can be called without creating the object from outside the class and have some variables in class which should not be modified by anyone.
+
+Assignment 4:
+9.Create abstract class and implementations, interface and implementations
+By taking any real world example like Mobile, System, Car, Bike etc.
+
+Assignment 5:
+10.write a program to practice primitive typecasting ?
+11.write a program to practice Object refrence typecasting ?
+12.write a program to practice operators on primitive datatypes?
+
+Assignment 6:
+13.print even numbers 
+14.print multiples of 7 between 1 to 100
+15.write a program to declare initialise and iterate array data in all possible ways -for single dimentional and 2 - dimentional
+
+Assignment 7:
+
+Write a program to find position of given character in a string- both first occurance and last occurance.
+Write a program to reverse given string(other than logic discussed in class)
+Write a program to find lengthiest string in array of strings.
+
+
+Assignment 8:
+Create , add, retrieve data using list(al,v,ll) and set(hs,ts,lhs) .
+Take any userdefined object like Employee, Product and add it to set by overriding equals and hashcode.
+
+JanBatch:
+Assignment 1: Write a program to create student class with (Id,name) method that displays student details(id,name) in main() call the class by creating the object, initialize data, call display details.
+

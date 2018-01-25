@@ -1,0 +1,44 @@
+Write a Query to print the name of the distict employee whose date of birth is in between '01/12/1988' and 02/05/1989'
+
+select distinct first_name,Hire_date from hr.employees where hire_date between '01/jan/05'and '01/mar/06';
+
+count the toatal salary department no wise where more than two employees exist?
+
+
+--------------------------
+
+Critical funtionalities of appln higher priority o
+
+
+
+Diff between SIT: diffrent types of testing to be done/  and System testings end to end 
+
+	Points : I don’t know what it will display when I type some new topic which is not in the classes list, as my credential not working I dint logged into the site to check.				
+					
+					
+					
+	Click on Recordings option to go to Recordings menu, If the user is already logged in the portal immediately after opening the website after Login		Should be able to access Recording page	Was able to see the Recordings page	pass
+
+
+-------------------------
+class running notes: 
+ss
+cant automate scenario :
+when ever you have tightdeadlines we cant do automated...
+functinalities are not stable we cant use automated....
+
+
+applications can be used within the company or applications used by end users : c2c, c2b
+what is test framework : 
+
+test plan : what to do and when to do ...
+i come with some plan and scope 
+Unit testing
+Smoke testing
+functionality 
+usability
+accesbility
+configuration testing
+
+test strategy
+test case documnets

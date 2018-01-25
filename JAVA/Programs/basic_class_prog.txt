@@ -1,0 +1,76 @@
+package sri.first.oops;
+vehicle.java :
+-----------------------------
+public class Vehichle {
+
+	//properties
+	public String name;
+	public String model;
+	public Integer make;
+	public String type;
+	
+	public void setName(String inputname){
+		name=inputname;
+		
+	}
+
+	public void setModel(String model){
+		this.model=model;
+	}
+	
+	public void setMake(Integer make){
+		this.make = make;
+	}
+	
+	public void setType(String type){
+		this.type = type;
+	}
+	
+	public void displayDetails(){
+	System.out.println("vehichle Details :");
+	System.out.println("vehichle name : "+ name);
+	System.out.println("vehichle Model : "+ model);
+	System.out.println("vehichle Make Year : "+ make);
+	System.out.println("vehichle Type : "+ type);
+	System.out.println("\n");
+	}
+}
+
+-------------------------------------
+
+VehichleDetails.java
+-------------------
+package sri.first.oops;
+
+public class VehichleDetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vehichle veh1 = new Vehichle();
+		veh1.name = "Corolla";
+		veh1.model = "Toyota";
+		veh1.make = 2006;
+		veh1.type = "Sedan";
+		veh1.displayDetails();
+		
+		Vehichle veh2 = new Vehichle();
+		veh2.setName("Odyssey");
+		veh2.setModel("Honda");
+		veh2.setMake(2010);
+		veh2.setType("Van");
+		veh2.displayDetails();
+		
+		Vehichle veh3 = new Vehichle();
+		veh3.setName("Acura");
+		veh3.setModel("Lexus");
+		veh3.make = 2012;
+		veh3.type = "Sedan";
+		veh3.displayDetails();
+		
+		
+		}
+	
+	
+
+}
+

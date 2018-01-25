@@ -1,0 +1,42 @@
+package com.collections;
+
+//import java.util.List;
+import java.util.Vector;
+
+public class VectorExample {
+
+	public void vectorList(){
+		
+		Vector<String> vlist = new Vector<String>(5);
+		Vector<Integer> vlist1 = new Vector <Integer>(4,5);
+
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		vlist.add("apple");
+		
+
+		vlist.add("apple");
+		vlist.add("apple");
+
+		
+System.out.println("Size: " + vlist.size());
+		System.out.println(" String Collection Size  :" + vlist.capacity());
+		vlist1.add(10);
+		vlist1.add(20);
+		vlist1.add(10);
+		System.out.println(" String Collection Size  :" + vlist1.capacity());
+		
+	}
+	public static void main(String[] args) {
+		VectorExample vl = new VectorExample();
+		vl.vectorList();
+	}
+
+}

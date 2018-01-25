@@ -1,0 +1,102 @@
+package sri.first.oops;
+
+public class CalcNum {
+
+	// Static counting the objects of the class level
+	public static int count=0;
+	
+	public CalcNum(){
+		count=count+1;
+		System.out.println("Number Of Objects Created for the Class : "+count);
+	}
+
+
+
+	//method overloading
+	public int caluculate(int a,int b){
+		int c = a+b;
+		System.out.println("caluculated Addition :" +c);
+		return c;
+		
+	}
+	public int calculate(int a,int b,int c){
+		int d=a*b*c;
+		System.out.println("Product is : "+d);
+		return d;
+		
+	}
+	public float caluculate(float a,int b){
+		float c = a-b;
+		System.out.println("Substraction : "+ c);
+		return c;
+	}
+	public int calculate(int a,int b,int c,int d){
+		int r=(a+b)/(c-d);
+		System.out.println("Result :"+ r);
+		return r;
+	}
+
+	public static void main(String args[]){
+		
+		CalcNum c1 = new CalcNum();
+		c1.caluculate(10, 20);
+		c1.caluculate(12.45f,5);
+		c1.calculate(2, 3, 4);
+		c1.calculate(10, 20, 10, 5);
+		
+		ChildClass d1 = new ChildClass();
+		d1.caluculate(20, 2);
+		d1.caluculate(10.45f,5);
+		d1.calculate(5, 8, 4);
+		d1.calculate(10, 25, 15, 5);
+		
+		CalcNum d2 = new ChildClass();
+		ChildClass c2 = (ChildClass)d2;	//type casting
+		c2.caluculate(4,2);
+		
+		Addition a1 = new Addition();
+		a1.caluculate(30, 6);
+		a1.caluculate(26.5f, 21);
+		a1.calculate(12,5,10);
+		
+		Addition c3 =new Addition();
+		c3.caluculate(12,6);
+		
+		ChildClass d4 =new Addition();
+		ChildClass a2 = d4;
+		a2.caluculate(5,7);
+		
+		ChildClass d5 =new Addition();
+		ChildClass c4 = (Addition)d5;
+		c4.caluculate(9,6);
+		
+		}
+
+	
+}
+--------------------------------------------------------
+
+package sri.first.oops;
+
+public class ChildClass extends CalcNum {
+	@Override
+	public int caluculate(int a,int b){
+			int c = a/b;
+			System.out.println("caluculated Division: child class method :" +c);
+			return c;
+			
+	}
+}
+--------------------------------------------------------------
+
+package sri.first.oops;
+
+public class Addition extends ChildClass {
+
+	@Override
+	public int caluculate(int a,int b){
+		int c = a+b+a;
+		System.out.println("a+b+a Sub Class :" +c);
+		return c;
+}
+}

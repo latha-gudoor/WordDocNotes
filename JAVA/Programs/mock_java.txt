@@ -1,0 +1,47 @@
+JAVA MOCK:
+1.Benefits of OOPS?
+1.Reusability
+2.Extensibility
+3.ReImplementation
+4.Modularity
+5.Security purpose
+
+2. What is an Exception?
+Ans.Run time error is called as an Exception.
+Error : which comes at the time of development
+Bug : which comes at the time of testing / pre release
+Defect : which comes at the time of production / post release
+
+3. Why Exception Handling Mechanism?
+to handle the run time weeor...to avoid abnormal termination.
+
+4. What code we will write with in try,Catch and Finally blocks ?
+try block :while developing the prog write one statement which may throw an error 
+catch block : we have to write the statements to display user friendly messages
+finally block : error free or cleaning up code , code that is irrespective of the cleanup code
+
+5.what is thread?
+is an independent execution path ...able to run with other execution paths.
+
+6.what is the baseclass library for the threading ? 
+system.threading is the base class library
+
+7.what are oops principles ?
+Encapsulation
+data abstraction
+polymorphism
+inheritance
+
+8.What is Encalsulation ?
+Wrapping states and behaviours...by implementing the class we can achieve encapsulation.
+
+9.what is polymorphism? types of polymorphism ?
+implementing mutiple functinalities with the same name : two types 
+1.static polymorphism 
+2.dynamic polymorphism
+
+10.what are static and dynamic polymorphisms.
+static : method which bind at complie time and which will execute at runtime or early binding time binding , compile time polymorphisms.
+Dynamic : method which will bind at compile time will not execute instead of that it will be binded andexecuted at runtime is called dynamic polymorphism, late binding,or runtime polymorphism.
+
+

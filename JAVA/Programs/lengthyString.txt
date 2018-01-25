@@ -1,0 +1,30 @@
+package com.string.prog;
+
+public class LengthyString {
+	String s1,s2;
+	
+	public void lengthStr(String input1,String input2){
+		s1=input1;
+		s2=input2;
+		
+		if (s1.length() > s2.length()){
+		System.out.println("String " + s1 + " is the lengthy String");
+		}
+		else
+		{ 
+			System.out.println("String " + s2 + " is the lengthy String");
+		}
+		
+	
+	}
+	
+	public static void main(String[] args) {
+		LengthyString str = new LengthyString();
+		str.lengthStr("Hello Everyone", "How Are You");
+		
+		LengthyString str1 = new LengthyString();
+		str1.lengthStr("California", "Illinois");
+
+	}
+
+}
